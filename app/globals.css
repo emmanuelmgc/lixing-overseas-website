@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111827;
+}
+
+::selection {
+  background: #b88a4a;
+  color: #03111f;
+}
+
+img {
+  max-width: 100%;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #b88a4a;
+  outline-offset: 3px;
+}
+
+.dossier-grid {
+  background-image: linear-gradient(rgba(216, 222, 230, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(216, 222, 230, 0.5) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+

@@ -1,0 +1,46 @@
+{
+    "name":  "lixing-overseas-site",
+    "version":  "1.0.0",
+    "description":  "励行出海企业官网",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "node node_modules/next/dist/bin/next dev",
+                    "build":  "node node_modules/next/dist/bin/next build --webpack",
+                    "start":  "node node_modules/next/dist/bin/next start",
+                    "lint":  "node node_modules/eslint/bin/eslint.js .",
+                    "typecheck":  "node node_modules/typescript/bin/tsc --noEmit"
+                },
+    "keywords":  [
+                     "出海咨询",
+                     "商务考察",
+                     "乌兹别克斯坦出海",
+                     "海外落地服务"
+                 ],
+    "author":  "",
+    "license":  "UNLICENSED",
+    "devEngines":  {
+                       "packageManager":  {
+                                              "name":  "pnpm",
+                                              "version":  "^11.0.7",
+                                              "onFail":  "download"
+                                          }
+                   },
+    "type":  "module",
+    "dependencies":  {
+                         "lucide-react":  "1.21.0",
+                         "next":  "16.2.9",
+                         "react":  "19.2.7",
+                         "react-dom":  "19.2.7"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "26.0.0",
+                            "@types/react":  "19.2.17",
+                            "@types/react-dom":  "19.2.3",
+                            "autoprefixer":  "10.5.1",
+                            "eslint":  "9.39.2",
+                            "eslint-config-next":  "16.2.9",
+                            "postcss":  "8.5.15",
+                            "tailwindcss":  "3.4.17",
+                            "typescript":  "6.0.3"
+                        }
+}
