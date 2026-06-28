@@ -5,7 +5,7 @@ import { CTASection } from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
   title: "海外营销咨询",
-  description: "让品牌先被目标市场理解。面向法语区、北非、西非等市场提供境外媒体资源、活动策划与本土化品牌运营建议。",
+  description: "让品牌先被目标市场理解。面向法语区、欧洲与非洲法语区国家市场提供境外媒体资源、活动策划与本土化品牌运营建议。",
 };
 
 export default function OverseasMarketingPage() {

@@ -6,9 +6,7 @@ import { Container } from "@/components/ui/Container";
 
 const priorityRegions = [
   { area: "乌兹别克斯坦 / 中亚", focus: "产业投资与项目验证" },
-  { area: "法国 / 北非 / 西非", focus: "法语区品牌与市场测试" },
-  { area: "东南亚", focus: "供应链与区域布局" },
-  { area: "其他新兴市场", focus: "根据行业与阶段筛选" },
+  { area: "法国 / 欧洲 / 非洲法语区国家", focus: "以法国为窗口的品牌与市场测试" },
 ];
 
 const capabilityTags = ["政府与园区对接", "商协会与企业拜访", "法税物流与落地支持"];
@@ -199,7 +197,7 @@ export function HeroSection({
             <svg viewBox="0 0 420 220" className="h-auto w-full" role="img" aria-label="重点区域地图示意">
               <path d="M35 154 C92 92 136 86 195 116 C246 141 282 80 370 66" fill="none" stroke="#1E344A" strokeWidth="2" strokeDasharray="6 6" />
               <path d="M72 166 C154 194 234 179 340 132" fill="none" stroke="#B88A4A" strokeWidth="1.4" opacity="0.7" />
-              {[{x:102,y:126,t:"乌兹别克斯坦 / 中亚"},{x:235,y:92,t:"法国 / 北非 / 西非"},{x:330,y:154,t:"东南亚"}].map((node) => (
+              {[{x:102,y:126,t:"乌兹别克斯坦 / 中亚"},{x:235,y:92,t:"法国 / 欧洲 / 非洲法语区国家"}].map((node) => (
                 <g key={node.t}>
                   <circle cx={node.x} cy={node.y} r="7" fill="#B88A4A" />
                   <circle cx={node.x} cy={node.y} r="17" fill="none" stroke="#B88A4A" opacity="0.24" />

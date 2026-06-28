@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: `%s｜${site.name}`,
   },
   description: seo.homeDescription,
-  keywords: ["出海咨询", "商务考察", "乌兹别克斯坦出海", "中亚投资考察", "法语区市场", "北非市场进入", "西非市场进入", "海外落地服务", "海外营销咨询", "政府资源对接", "海外园区考察"],
+  keywords: ["出海咨询", "商务考察", "乌兹别克斯坦出海", "中亚投资考察", "法语区市场", "欧洲法语区市场", "非洲法语区市场", "海外落地服务", "海外营销咨询", "政府资源对接", "海外园区考察"],
   icons: {
     icon: "/images/lixing/logo-mark.png",
     apple: "/images/lixing/logo-mark.png",

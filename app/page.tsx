@@ -29,7 +29,7 @@ export default function HomePage() {
       <HeroSection
         eyebrow="面向中国企业的新兴市场出海咨询与落地服务"
         title={"出海更稳，\n登陆更快"}
-        subtitle="我们帮助企业在进入中亚、法语区与东南亚市场前，看清机会、连接关键资源，并把商务考察转化为可执行的落地路径。"
+        subtitle="我们帮助企业在进入乌兹别克斯坦/中亚与法语区国家前，看清机会、连接关键资源，并把商务考察转化为可执行的落地路径。励行深耕两个重点区域，不做泛出海。"
         image="/images/lixing/hero-consulting-generated.webp"
         secondary="查看目的地方案"
       />

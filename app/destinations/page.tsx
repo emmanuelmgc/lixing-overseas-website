@@ -11,7 +11,7 @@ import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
   title: "目的地总览",
-  description: "选择市场，比盲目出海更重要。了解乌兹别克斯坦/中亚、法语区国家、东南亚及其他新兴市场的进入路径。",
+  description: "选择市场，比盲目出海更重要。了解乌兹别克斯坦/中亚与法语区国家的进入路径，聚焦深耕两个重点区域。",
 };
 
 export default function DestinationsPage() {

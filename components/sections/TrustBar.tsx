@@ -11,7 +11,7 @@ const credentials = [
   },
   {
     headline: "重点覆盖中亚与法语区市场",
-    description: "以乌兹别克斯坦、法国、北非、西非为重点方向",
+    description: "以乌兹别克斯坦、法国、欧洲与非洲法语区国家为重点方向",
   },
   {
     headline: "可调用的在地资源网络",

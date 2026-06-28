@@ -16,7 +16,7 @@ export function Footer() {
                 className="h-24 w-auto"
               />
             </Link>
-            <p className="max-w-md leading-7">帮助中国企业在进入中亚、法语区、东南亚等新兴市场前，完成机会验证、资源对接与落地路径判断。</p>
+            <p className="max-w-md leading-7">帮助中国企业在进入乌兹别克斯坦/中亚与法语区国家前，完成机会验证、资源对接与落地路径判断。</p>
           </div>
 
           <div>
