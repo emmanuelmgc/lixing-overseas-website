@@ -27,7 +27,7 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         isHomeHero
-          ? "border-b border-white/10 bg-[#071A2F]/[0.74] text-white backdrop-blur-md"
+          ? "border-b border-white/[0.12] bg-[#071A2F]/[0.74] text-white shadow-[0_1px_24px_rgba(0,0,0,0.18)] backdrop-blur-md"
           : "border-b border-line/70 bg-white/[0.92] text-navy shadow-sm backdrop-blur"
       }`}
     >
@@ -36,7 +36,7 @@ export function Header() {
           <img
             src={logoSrc}
             alt="LEXON 励行出海"
-            className="h-11 w-auto sm:h-12"
+            className={`h-[44px] w-auto sm:h-[48px] ${isHomeHero ? "drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]" : ""}`}
           />
         </Link>
 

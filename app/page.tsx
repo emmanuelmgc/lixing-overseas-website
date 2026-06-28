@@ -35,7 +35,7 @@ export default function HomePage() {
       />
       <TrustBar />
 
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white pt-8 pb-16 md:pt-12 md:pb-24">
         <Container>
           <SectionHeader
             title="先判断，再出访，再落地"

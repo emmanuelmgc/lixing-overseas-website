@@ -16,7 +16,7 @@ export function ButtonLink({
   ariaLabel?: string;
 }) {
   const styles = {
-    primary: "bg-gold text-ink hover:bg-[#A77939]",
+    primary: "bg-gold text-ink hover:bg-gold/90",
     secondary: "border border-line bg-white text-navy hover:border-gold hover:text-ink",
     dark: "bg-navy text-white hover:bg-ink",
   }[variant];
@@ -25,7 +25,7 @@ export function ButtonLink({
     <Link
       href={href}
       aria-label={ariaLabel}
-      className={`inline-flex items-center gap-2 rounded px-5 py-3 text-sm font-semibold transition ${styles} ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded px-7 py-3.5 text-[15px] font-semibold transition ${styles} ${className}`}
     >
       {children}
       <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -39,17 +39,17 @@ export function HeroSection({
 
         {image ? (
           <>
-            <div className="absolute inset-y-0 right-0 hidden w-[62%] lg:block" aria-hidden="true">
+            <div className="absolute inset-y-0 right-0 hidden w-[50%] lg:block" aria-hidden="true">
               <Image
                 src={image}
                 alt=""
                 fill
                 priority
-                sizes="62vw"
-                className="object-cover object-[62%_center] opacity-100 saturate-[0.98] contrast-[1.04]"
+                sizes="50vw"
+                className="object-cover object-[50%_45%] opacity-95 saturate-[0.98] contrast-[1.04]"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,#071A2F_0%,rgba(7,26,47,0.82)_18%,rgba(7,26,47,0.32)_45%,rgba(7,26,47,0.1)_78%,rgba(7,26,47,0.18)_100%)]" />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,26,47,0.2)_0%,rgba(7,26,47,0.06)_42%,rgba(7,26,47,0.72)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,#071A2F_0%,rgba(7,26,47,0.86)_22%,rgba(7,26,47,0.34)_52%,rgba(7,26,47,0.12)_82%,rgba(7,26,47,0.2)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,26,47,0.2)_0%,rgba(7,26,47,0.04)_38%,rgba(7,26,47,0.78)_100%)]" />
             </div>
             <div className="absolute inset-0 bg-[linear-gradient(90deg,#071A2F_0%,rgba(7,26,47,0.98)_42%,rgba(7,26,47,0.54)_64%,rgba(7,26,47,0.18)_100%)]" aria-hidden="true" />
           </>
@@ -72,25 +72,25 @@ export function HeroSection({
             </g>
           ))}
         </svg>
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#071A2F] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#071A2F] via-[#071A2F]/40 to-transparent" />
 
         <Container className="relative flex min-h-[780px] max-w-[1160px] items-center pb-16 pt-28 md:min-h-[820px] lg:min-h-[840px] lg:pt-24">
-          <div className="grid w-full items-center gap-12 lg:grid-cols-[54fr_46fr] xl:gap-14">
-            <div className="max-w-[640px]">
+          <div className="grid w-full items-center gap-10 lg:grid-cols-[54fr_46fr] xl:gap-12">
+            <div className="max-w-[560px]">
               <p className="mb-5 max-w-xl text-xs font-semibold tracking-[0.18em] text-[#D7B476]">
                 {eyebrow}
               </p>
-              <h1 className="whitespace-pre-line font-serif text-5xl font-semibold leading-[0.98] tracking-[0] text-white sm:text-6xl lg:text-[72px] xl:text-[76px]">
+              <h1 className="whitespace-pre-line font-serif text-5xl font-semibold leading-[1.08] tracking-[-0.01em] text-white sm:text-6xl lg:text-[72px] xl:text-[76px]">
                 {title}
               </h1>
-              <p className="mt-7 max-w-[600px] text-base leading-8 text-white/70 md:text-lg">
+              <p className="mt-7 max-w-[560px] text-base leading-[1.85] text-white/72 md:text-lg">
                 {subtitle}
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link
                   href="/contact"
                   aria-label={primary}
-                  className="inline-flex items-center gap-2 rounded bg-gold px-6 py-3.5 text-sm font-semibold text-[#071A2F] transition hover:bg-[#C19656]"
+                  className="inline-flex items-center gap-1.5 rounded bg-gold px-7 py-3.5 text-[15px] font-semibold text-[#071A2F] transition hover:bg-gold/92"
                 >
                   {primary}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -99,7 +99,7 @@ export function HeroSection({
                   <Link
                     href={secondaryHref}
                     aria-label={secondary}
-                    className="inline-flex items-center gap-2 rounded border border-white/25 bg-white/[0.04] px-6 py-3.5 text-sm font-semibold text-white/[0.88] transition hover:border-gold/70 hover:bg-white/[0.08] hover:text-white"
+                    className="inline-flex items-center gap-1.5 rounded border border-white/25 bg-white/[0.04] px-7 py-3.5 text-[15px] font-semibold text-white/[0.88] transition hover:border-gold/70 hover:bg-white/[0.08] hover:text-white"
                   >
                     {secondary}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -117,30 +117,33 @@ export function HeroSection({
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 500px"
-                    className="object-cover object-[58%_center]"
+                    className="object-cover object-[50%_45%]"
                   />
                 ) : null}
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,26,47,0.02)_0%,rgba(7,26,47,0.2)_44%,rgba(7,26,47,0.9)_100%)]" />
+                <div
+                  className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,26,47,0.02)_0%,rgba(7,26,47,0.18)_44%,rgba(7,26,47,0.78)_100%)]"
+                  style={{ WebkitMaskImage: "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0.25) 100%)", maskImage: "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0.25) 100%)" }}
+                />
                 <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,26,47,0.42)_0%,rgba(7,26,47,0.08)_50%,rgba(7,26,47,0.28)_100%)]" />
               </div>
 
-              <div className="absolute bottom-5 left-5 right-5 overflow-hidden rounded-[16px] border border-white/[0.18] bg-[#061B31]/[0.78] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.32)] backdrop-blur-lg sm:p-6">
-                <div className="flex items-center justify-between gap-5 border-b border-white/[0.12] pb-4">
+              <div className="absolute bottom-10 left-6 right-6 overflow-hidden rounded-[16px] border border-white/[0.2] bg-[#061B31]/[0.92] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-lg sm:p-6">
+                <div className="flex items-center justify-between gap-5 border-b border-white/[0.14] pb-4">
                   <div>
                     <p className="text-[11px] font-semibold tracking-[0.2em] text-[#D7B476]">MARKET FOCUS</p>
-                    <h2 className="mt-2 font-serif text-2xl font-semibold text-white">重点区域</h2>
+                    <h2 className="mt-1.5 font-serif text-[28px] font-semibold leading-tight text-white">重点区域</h2>
                   </div>
-                  <span className="h-px w-14 bg-gold/70" aria-hidden="true" />
+                  <span className="h-[2px] w-20 bg-gold" aria-hidden="true" />
                 </div>
 
                 <ol className="mt-4 grid gap-3">
                   {priorityRegions.map((region, index) => (
                     <li
                       key={region.area}
-                      className="relative grid grid-cols-[40px_1fr] items-start gap-3 overflow-hidden rounded-[10px] border border-white/[0.14] bg-white/[0.04] p-3.5 transition hover:border-gold/45 hover:bg-white/[0.07]"
+                      className="relative grid grid-cols-[36px_1fr] items-start gap-3 overflow-hidden rounded-[10px] border border-white/[0.14] bg-white/[0.04] p-4 transition hover:border-gold/45 hover:bg-white/[0.07]"
                     >
                       <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent" aria-hidden="true" />
-                      <span className="pt-0.5 font-serif text-2xl font-semibold leading-none text-gold/90">
+                      <span className="pt-0.5 font-serif text-xl font-semibold leading-none text-gold/80">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>

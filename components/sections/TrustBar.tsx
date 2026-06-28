@@ -2,11 +2,15 @@ import { Container } from "@/components/ui/Container";
 
 const credentials = [
   {
-    headline: "9年出海服务经验",
+    accent: "9",
+    unit: "年",
+    headline: "出海服务经验",
     description: "覆盖商务考察、政企交流与企业出海项目",
   },
   {
-    headline: "300+政企客户服务经验",
+    accent: "300",
+    unit: "+",
+    headline: "政企客户服务经验",
     description: "服务对象包括政府、企业、商学院与行业组织",
   },
   {
@@ -21,13 +25,21 @@ const credentials = [
 
 export function TrustBar() {
   return (
-    <section className="border-b border-line bg-rice py-8">
+    <section className="border-y border-gold/15 bg-gradient-to-b from-rice via-[#FBF6EC] to-white py-7">
       <Container className="max-w-[1160px]">
-        <div className="grid gap-px bg-line/70 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-y-5 sm:grid-cols-2 sm:gap-y-0 lg:grid-cols-4 lg:divide-x lg:divide-gold/25">
           {credentials.map((item) => (
-            <article key={item.headline} className="bg-rice px-5 py-6 sm:px-6 lg:px-7">
-              <p className="text-[15px] font-semibold leading-6 text-navy">{item.headline}</p>
-              <p className="mt-3 text-sm leading-6 text-gray-600">{item.description}</p>
+            <article key={item.headline} className="px-5 sm:px-6 lg:px-7">
+              {item.accent ? (
+                <p className="font-serif text-[15px] font-semibold tracking-tight text-gold">
+                  {item.accent}
+                  <span className="ml-0.5 text-[12px] font-medium not-italic text-gold/75">{item.unit}</span>
+                  <span className="ml-2 text-[15px] font-semibold text-navy">{item.headline}</span>
+                </p>
+              ) : (
+                <p className="text-[15px] font-semibold leading-6 text-navy">{item.headline}</p>
+              )}
+              <p className="mt-2 text-sm leading-6 text-gray-600">{item.description}</p>
             </article>
           ))}
         </div>
