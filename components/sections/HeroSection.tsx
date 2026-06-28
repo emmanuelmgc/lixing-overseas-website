@@ -133,13 +133,19 @@ export function HeroSection({
                   <span className="h-px w-14 bg-gold/70" aria-hidden="true" />
                 </div>
 
-                <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                <ol className="mt-4 grid gap-3">
                   {priorityRegions.map((region, index) => (
-                    <li key={region.area} className="grid grid-cols-[28px_1fr] gap-3 border-b border-white/10 pb-3 last:border-b-0 last:pb-0 sm:last:border-b sm:last:pb-3 lg:last:border-b-0 lg:last:pb-0">
-                      <span className="pt-1 text-xs font-semibold text-gold/90">{String(index + 1).padStart(2, "0")}</span>
+                    <li
+                      key={region.area}
+                      className="relative grid grid-cols-[40px_1fr] items-start gap-3 overflow-hidden rounded-[10px] border border-white/[0.14] bg-white/[0.04] p-3.5 transition hover:border-gold/45 hover:bg-white/[0.07]"
+                    >
+                      <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/55 to-transparent" aria-hidden="true" />
+                      <span className="pt-0.5 font-serif text-2xl font-semibold leading-none text-gold/90">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
                       <div>
                         <p className="text-[15px] font-semibold leading-6 text-white">{region.area}</p>
-                        <p className="mt-0.5 text-sm leading-6 text-white/[0.64]">{region.focus}</p>
+                        <p className="mt-1 text-[13px] leading-5 text-white/[0.64]">{region.focus}</p>
                       </div>
                     </li>
                   ))}
@@ -197,7 +203,7 @@ export function HeroSection({
             <svg viewBox="0 0 420 220" className="h-auto w-full" role="img" aria-label="重点区域地图示意">
               <path d="M35 154 C92 92 136 86 195 116 C246 141 282 80 370 66" fill="none" stroke="#1E344A" strokeWidth="2" strokeDasharray="6 6" />
               <path d="M72 166 C154 194 234 179 340 132" fill="none" stroke="#B88A4A" strokeWidth="1.4" opacity="0.7" />
-              {[{x:102,y:126,t:"乌兹别克斯坦 / 中亚"},{x:235,y:92,t:"法国 / 欧洲 / 非洲法语区国家"}].map((node) => (
+              {[{x:104,y:130,t:"乌兹别克斯坦 / 中亚"},{x:238,y:104,t:"法国 / 欧洲 / 非洲法语区国家"}].map((node) => (
                 <g key={node.t}>
                   <circle cx={node.x} cy={node.y} r="7" fill="#B88A4A" />
                   <circle cx={node.x} cy={node.y} r="17" fill="none" stroke="#B88A4A" opacity="0.24" />
