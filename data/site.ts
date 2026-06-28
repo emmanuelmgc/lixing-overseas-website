@@ -11,10 +11,9 @@ export const site = {
 };
 
 export const navItems = [
-  { label: "首页", href: "/" },
-  { label: "去哪里出海", href: "/destinations" },
-  { label: "怎么出海", href: "/services" },
-  { label: "案例", href: "/cases" },
+  { label: "重点市场", href: "/destinations" },
+  { label: "服务方法", href: "/services" },
+  { label: "项目案例", href: "/cases" },
   { label: "资源网络", href: "/resources" },
   { label: "关于励行", href: "/about" },
 ];

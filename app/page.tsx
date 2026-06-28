@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import { cases } from "@/data/cases";
-import { destinations } from "@/data/destinations";
 import { decisionIssues } from "@/data/services";
 import { insights } from "@/data/insights";
 import { seo } from "@/data/site";
 import { CaseCard } from "@/components/cards/CaseCard";
-import { DestinationCard } from "@/components/cards/DestinationCard";
 import { InsightCard } from "@/components/cards/InsightCard";
 import { IssueCard } from "@/components/cards/IssueCard";
 import { CTASection } from "@/components/sections/CTASection";
-import { DestinationMap } from "@/components/sections/DestinationMap";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { KeyMarkets } from "@/components/sections/KeyMarkets";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ResourceNetwork } from "@/components/sections/ResourceNetwork";
 import { SectionHeader } from "@/components/sections/SectionHeader";
@@ -23,90 +21,133 @@ export const metadata: Metadata = {
   description: seo.homeDescription,
 };
 
+// 首页只展示 3 个代表案例：制造园区 / 水务环保 / 光伏
+const homepageCases = cases.slice(0, 3);
+
 export default function HomePage() {
   return (
     <>
+      {/* 1. 首屏 Hero */}
       <HeroSection
         eyebrow="面向中国企业的新兴市场出海咨询与落地服务"
         title={"出海更稳，\n登陆更快"}
-        subtitle="我们帮助企业在进入乌兹别克斯坦/中亚与法语区国家前，看清机会、连接关键资源，并把商务考察转化为可执行的落地路径。励行深耕两个重点区域，不做泛出海。"
+        subtitle="励行出海聚焦中亚与法语区，帮助企业在国内研判市场、在海外筛选资源，每一次出发都是为了项目的落地。"
         image="/images/lixing/hero-consulting-generated.webp"
-        secondary="查看目的地方案"
+        primary="预约出海诊断"
+        secondary="查看重点市场"
+        secondaryHref="/destinations"
       />
+
+      {/* 2. 信任背书 / 核心数据条 */}
       <TrustBar />
 
-      <section className="bg-white pt-8 pb-16 md:pt-12 md:pb-24">
+      {/* 3. 核心问题 */}
+      <section className="bg-white py-20 md:py-28">
         <Container>
           <SectionHeader
-            title="先判断，再出访，再落地"
-            intro="官网首页只回答三个关键问题：去哪、怎么去、见谁和验证什么。"
+            title="企业出海前，最该先判断三个问题"
+            intro="励行解决的不是安排出国，而是进入市场前的判断问题和进场后的在地资源加持。"
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {decisionIssues.slice(0, 3).map((issue, index) => <IssueCard key={issue.question} issue={issue} index={index} />)}
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {decisionIssues.slice(0, 3).map((issue, index) => (
+              <IssueCard key={issue.question} issue={issue} index={index} />
+            ))}
           </div>
         </Container>
       </section>
 
-      <section className="bg-mist py-16 md:py-24">
+      {/* 4. 重点市场 */}
+      <section className="bg-rice py-20 md:py-28">
+        <Container>
+          <SectionHeader
+            eyebrow="Market Focus"
+            title="不做泛出海，只聚焦两个核心市场"
+            intro="励行深耕乌兹别克斯坦/中亚与法国/欧洲/非洲法语区，每个市场都有可调用的在地资源网络。"
+          />
+          <div className="mt-12">
+            <KeyMarkets />
+          </div>
+        </Container>
+      </section>
+
+      {/* 5. 服务方法 */}
+      <section className="bg-white py-20 md:py-28">
         <Container>
           <SectionHeader
             eyebrow="Services"
-            title="从考察到落地，把出海拆成可执行的步骤"
-            intro="三条服务路径分别对应验证市场、形成落地路径和测试海外表达，避免把出海变成一次没有承接的出访。"
+            title="三类服务，对应企业出海的三个关键阶段"
+            intro="从验证市场到形成落地路径，再到测试海外品牌表达，避免把出海变成一次没有承接的出访。"
           />
-          <div className="mt-10"><ServicePath /></div>
+          <div className="mt-12">
+            <ServicePath />
+          </div>
         </Container>
       </section>
 
-      <section className="bg-rice py-16 md:py-24">
+      {/* 6. 代表案例（前移到资源网络之前） */}
+      <section className="bg-mist py-20 md:py-28">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <SectionHeader
+            eyebrow="Cases"
+            title="用真实项目经验，帮助客户少走弯路"
+            intro="首页只展示代表性项目档案，更多区域与行业案例可在沟通中按需求展开。"
+          />
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {homepageCases.map((item) => (
+              <CaseCard key={item.title} item={item} />
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* 7. 资源网络（结构图） */}
+      <section className="bg-white py-20 md:py-28">
+        <Container>
+          <SectionHeader
+            eyebrow="Network"
+            title="资源不是名单，而是能被项目调用的连接"
+            intro="从客户问题出发，调用政府、园区、商协会、专业机构等在地资源，输出可执行的判断与路径。"
+          />
+          <div className="mt-12">
+            <ResourceNetwork />
+          </div>
+        </Container>
+      </section>
+
+      {/* 8. 服务流程（弱化） */}
+      <section className="bg-rice py-16 md:py-20">
+        <Container>
+          <SectionHeader
+            eyebrow="Process"
+            title="合作流程"
+          />
+          <div className="mt-10">
+            <ProcessTimeline />
+          </div>
+        </Container>
+      </section>
+
+      {/* 9. 洞察文章（压缩为3条，低视觉权重） */}
+      <section className="bg-white py-20 md:py-24">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <div>
-              <SectionHeader eyebrow="Destinations" title="先选对市场，再设计进入路径" intro="不同区域适合解决的问题不同。励行会先帮助客户判断目的地，再决定是否进入考察、合作方筛选或落地服务。" />
-              <div className="mt-8"><DestinationMap compact /></div>
+              <SectionHeader
+                eyebrow="Insights"
+                title="出海前值得先想清楚的几个问题"
+              />
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {destinations.map((destination) => <DestinationCard key={destination.title} destination={destination} />)}
+            <div>
+              {insights.map((title, index) => (
+                <InsightCard key={title} title={title} index={index} />
+              ))}
             </div>
           </div>
         </Container>
       </section>
 
-      <section className="bg-white py-16 md:py-24">
-        <Container>
-          <SectionHeader eyebrow="Resources" title="资源不是名单，而是能被项目调用的连接" intro="资源卡只写可用于项目的部分：它解决什么问题、适合谁、能交付成什么材料。" />
-          <div className="mt-10"><ResourceNetwork limit={4} /></div>
-        </Container>
-      </section>
-
-      <section className="bg-mist py-16 md:py-24">
-        <Container>
-          <SectionHeader eyebrow="Process" title="一次有效出海服务，应从问题诊断开始" intro="每一步都围绕判断、验证、筛选、对接和下一步路径展开，而不是简单安排行程。" />
-          <div className="mt-10"><ProcessTimeline /></div>
-        </Container>
-      </section>
-
-      <section className="bg-white py-16 md:py-24">
-        <Container>
-          <SectionHeader eyebrow="Cases" title="用真实项目经验，帮助客户少走弯路" intro="首页只展示重点项目档案，更多区域与行业案例可在沟通中按需求展开。" />
-          <div className="mt-10 grid gap-5 xl:grid-cols-2">
-            {cases.slice(0, 4).map((item) => <CaseCard key={item.title} item={item} />)}
-          </div>
-        </Container>
-      </section>
-
-
-      <section className="bg-rice py-16 md:py-24">
-        <Container>
-          <SectionHeader eyebrow="Insights" title="出海前值得先想清楚的几个问题" intro="这些问题没有标准答案，但在投入之前值得认真判断一次。" />
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {insights.map((title, index) => <InsightCard key={title} title={title} index={index} />)}
-          </div>
-        </Container>
-      </section>
-
+      {/* 10. 底部 CTA */}
       <CTASection />
     </>
   );
 }
-

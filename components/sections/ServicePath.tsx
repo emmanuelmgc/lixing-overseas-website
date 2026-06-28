@@ -1,29 +1,45 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { servicePaths } from "@/data/services";
 
 export function ServicePath() {
   return (
-    <div className="grid gap-5 lg:grid-cols-3">
-      {servicePaths.map((service, index) => (
-        <article key={service.title} className="group border border-line bg-white shadow-sm transition hover:-translate-y-1 hover:border-gold/70">
-          <div className="relative aspect-[5/3] overflow-hidden bg-navy">
-            <Image src={service.image} alt={`${service.title}现场素材`} fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover opacity-80 transition duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/78 to-transparent" />
-            <div className="absolute left-5 top-5 rounded bg-gold px-3 py-1 text-xs font-semibold text-ink">{service.step}</div>
-            <h3 className="absolute bottom-5 left-5 right-5 font-serif text-2xl font-semibold text-white">{service.title}</h3>
+    <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
+      {servicePaths.map((service) => (
+        <article
+          key={service.title}
+          className="group overflow-hidden rounded-[10px] border border-line bg-white transition hover:border-gold/50"
+        >
+          <div className="relative aspect-[16/9] overflow-hidden bg-navy">
+            <Image
+              src={service.image}
+              alt={`${service.title}现场素材`}
+              fill
+              sizes="(max-width: 1024px) 100vw, 400px"
+              className="object-cover opacity-85 transition duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/72 to-transparent" />
+            <div className="absolute left-5 top-5 rounded bg-gold px-2.5 py-1 text-[11px] font-semibold text-ink">
+              {service.step}
+            </div>
+            <h3 className="absolute bottom-5 left-5 right-5 font-serif text-[22px] font-semibold text-white">
+              {service.title}
+            </h3>
           </div>
           <div className="p-6">
-            <p className="text-sm font-semibold text-navy">目标：{service.target}</p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {service.items.map((item) => (
-                <span key={item} className="rounded border border-line bg-mist px-2.5 py-1 text-xs text-gray-700">{item}</span>
-              ))}
-            </div>
-            <p className="mt-5 text-sm leading-7 text-gray-600"><span className="font-semibold text-gray-900">交付：</span>{service.deliverables}</p>
-            <Link href={service.href} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold" aria-label={`查看${service.title}服务`}>
-              查看{service.title}服务 <ArrowRight className="h-4 w-4" />
+            <p className="text-[14px] leading-7 text-gray-600">{service.target}</p>
+            <p className="mt-4 text-[13px] leading-6 text-gray-500">
+              <span className="font-semibold text-gray-700">交付：</span>
+              {service.deliverables}
+            </p>
+            <Link
+              href={service.href}
+              className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-gold"
+              aria-label={`查看${service.title}服务`}
+            >
+              查看服务详情
+              <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </article>
@@ -45,11 +61,10 @@ export function ServiceStageMatrix() {
       {rows.map((row) => (
         <div key={row[0]} className="grid gap-4 border-b border-line p-5 last:border-b-0 md:grid-cols-[0.8fr_0.9fr_1.3fr]">
           <p className="font-semibold text-navy">{row[0]}</p>
-          <p className="flex items-center gap-2 text-gray-700"><CheckCircle2 className="h-4 w-4 text-gold" />{row[1]}</p>
+          <p className="text-gray-700">{row[1]}</p>
           <p className="text-gray-600">{row[2]}</p>
         </div>
       ))}
     </div>
   );
 }
-

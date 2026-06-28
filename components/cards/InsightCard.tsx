@@ -2,11 +2,16 @@ import { ArrowUpRight } from "lucide-react";
 
 export function InsightCard({ title, index }: { title: string; index: number }) {
   return (
-    <article className="border border-line bg-white p-5 transition hover:border-gold/70">
-      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-gold">Insight {String(index + 1).padStart(2, "0")}</p>
-      <h3 className="min-h-20 font-serif text-xl font-semibold leading-snug text-navy">{title}</h3>
-      <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold">阅读全文 <ArrowUpRight className="h-4 w-4" /></span>
+    <article className="group flex items-start gap-4 border-b border-line/60 py-5 last:border-b-0 transition hover:border-gold/40">
+      <span className="mt-0.5 font-serif text-[13px] font-semibold text-gold">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <div className="flex-1">
+        <h3 className="text-[16px] font-semibold leading-7 text-navy transition group-hover:text-gold">
+          {title}
+        </h3>
+      </div>
+      <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-gray-400 transition group-hover:text-gold" />
     </article>
   );
 }
-
