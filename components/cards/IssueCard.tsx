@@ -2,7 +2,7 @@ import { AlertTriangle, CheckCircle2 } from "lucide-react";
 
 export function IssueCard({ issue, index }: { issue: { question: string; risk: string; action: string }; index: number }) {
   return (
-    <article className="rounded-[10px] border border-line bg-white p-6 transition hover:border-gold/50">
+    <article className="rounded-[10px] bg-white p-6">
       <div className="mb-5 flex items-center justify-between">
         <span className="font-serif text-[13px] font-semibold text-gold">
           {String(index + 1).padStart(2, "0")}

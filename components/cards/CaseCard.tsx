@@ -3,7 +3,7 @@ import type { CaseItem } from "@/data/cases";
 
 export function CaseCard({ item }: { item: CaseItem }) {
   return (
-    <article className="group overflow-hidden rounded-[10px] border border-line bg-white transition hover:border-gold/50">
+    <article className="group overflow-hidden rounded-[10px] border border-line/40 bg-white transition duration-300 hover:border-gold/40 hover:shadow-md hover:-translate-y-0.5">
       <div className="relative aspect-[16/9] bg-navy">
         <Image
           src={item.image}

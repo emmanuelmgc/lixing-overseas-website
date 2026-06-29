@@ -9,7 +9,7 @@ export function ServicePath() {
       {servicePaths.map((service) => (
         <article
           key={service.title}
-          className="group overflow-hidden rounded-[10px] border border-line bg-white transition hover:border-gold/50"
+          className="group overflow-hidden rounded-[10px] border border-line/40 bg-white transition duration-300 hover:border-gold/40 hover:shadow-md hover:-translate-y-0.5"
         >
           <div className="relative aspect-[16/9] overflow-hidden bg-navy">
             <Image

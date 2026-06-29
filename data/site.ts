@@ -1,3 +1,6 @@
+import { Search, FileText, Users, ClipboardCheck, TrendingUp } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
 export const site = {
   name: "励行出海",
   slogan: "出海更稳，登陆更快",
@@ -47,6 +50,15 @@ export const processSteps = [
   { title: "资源对接", body: "对接政府、园区、企业、商协会和专业机构。" },
   { title: "全程执行", body: "安排考察、翻译、会议、交通、现场协调与风险控制。" },
   { title: "成果转化", body: "形成考察总结、机会清单、风险提示和下一步落地建议。" },
+];
+
+// 配合 processSteps 使用的线性图标，弱化表达
+export const processIcons: LucideIcon[] = [
+  Search,
+  FileText,
+  Users,
+  ClipboardCheck,
+  TrendingUp,
 ];
 
 export const seo = {

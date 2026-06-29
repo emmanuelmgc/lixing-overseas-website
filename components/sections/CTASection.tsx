@@ -13,25 +13,33 @@ export function CTASection({
   secondary?: string;
 }) {
   return (
-    <section className="bg-ink py-20 text-white md:py-28">
-      <Container>
-        <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-end">
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-gold">Consultation</p>
-            <h2 className="font-serif text-3xl font-semibold leading-tight md:text-[44px]">{title}</h2>
-            <p className="mt-5 max-w-2xl leading-8 text-white/72">{body}</p>
-          </div>
-          <div className="flex flex-wrap gap-3 md:justify-end">
+    <section className="relative overflow-hidden bg-ink py-24 text-white md:py-32">
+      {/* 极淡的渐变光晕，烘托高端咨询氛围，不抢内容焦点 */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(184,138,74,0.08),transparent_55%)]" aria-hidden="true" />
+
+      <Container className="relative">
+        <div className="mx-auto max-w-[760px] text-center">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-gold">Consultation</p>
+          <h2 className="font-serif text-3xl font-semibold leading-[1.2] tracking-[-0.01em] md:text-[42px]">
+            {title}
+          </h2>
+          <p className="mx-auto mt-5 max-w-[560px] text-[15.5px] leading-[1.85] text-white/72">
+            {body}
+          </p>
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
             <ButtonLink href="/contact" ariaLabel={primary}>{primary}</ButtonLink>
             <ButtonLink
               href="/contact"
               variant="secondary"
               ariaLabel={secondary}
-              className="border-white/20 bg-white/10 text-white hover:bg-white hover:text-ink"
+              className="border-white/20 bg-white/[0.06] text-white hover:border-gold/60 hover:bg-white hover:text-ink"
             >
               {secondary}
             </ButtonLink>
           </div>
+          <p className="mt-8 text-[12.5px] tracking-wide text-white/45">
+            9 年出海服务经验 · 300+ 政企客户 · 聚焦中亚与法语区
+          </p>
         </div>
       </Container>
     </section>

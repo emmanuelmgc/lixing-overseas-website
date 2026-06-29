@@ -56,8 +56,8 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 4. 重点市场 */}
-      <section className="bg-rice py-20 md:py-28">
+      {/* 4. 重点市场（暖白背景，作为视觉节奏的转折点） */}
+      <section className="bg-[#FAFAF8] py-20 md:py-28">
         <Container>
           <SectionHeader
             eyebrow="Market Focus"
@@ -70,7 +70,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 5. 服务方法 */}
+      {/* 5. 服务方法（回到白底，承接重点市场） */}
       <section className="bg-white py-20 md:py-28">
         <Container>
           <SectionHeader
@@ -84,8 +84,8 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 6. 代表案例（前移到资源网络之前） */}
-      <section className="bg-mist py-20 md:py-28">
+      {/* 6. 代表案例（白底 + 极细分隔线建立锚点） */}
+      <section className="border-t border-line/30 bg-white py-20 md:py-28">
         <Container>
           <SectionHeader
             eyebrow="Cases"
@@ -100,8 +100,8 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 7. 资源网络（结构图） */}
-      <section className="bg-white py-20 md:py-28">
+      {/* 7. 资源网络（结构图，暖白底与重点市场呼应） */}
+      <section className="border-t border-line/30 bg-[#FAFAF8] py-20 md:py-28">
         <Container>
           <SectionHeader
             eyebrow="Network"
@@ -114,8 +114,8 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 8. 服务流程（弱化） */}
-      <section className="bg-rice py-16 md:py-20">
+      {/* 8. 服务流程（弱化，白底留出呼吸） */}
+      <section className="bg-white py-16 md:py-20">
         <Container>
           <SectionHeader
             eyebrow="Process"
@@ -127,7 +127,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 9. 洞察文章（压缩为3条，低视觉权重） */}
+      {/* 9. 洞察文章（白底自然收尾，弱化无容器风格） */}
       <section className="bg-white py-20 md:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
