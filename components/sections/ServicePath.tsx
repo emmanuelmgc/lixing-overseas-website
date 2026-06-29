@@ -28,8 +28,8 @@ export function ServicePath() {
             </h3>
           </div>
           <div className="p-6">
-            <p className="text-[14px] leading-7 text-gray-600">{service.target}</p>
-            <p className="mt-4 text-[13px] leading-6 text-gray-500">
+            <p className="text-[14.5px] leading-[1.65] text-gray-600">{service.target}</p>
+            <p className="mt-4 text-[13.5px] leading-[1.6] text-gray-500">
               <span className="font-semibold text-gray-700">交付：</span>
               {service.deliverables}
             </p>

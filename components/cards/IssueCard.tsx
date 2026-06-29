@@ -12,7 +12,7 @@ export function IssueCard({ issue, index }: { issue: { question: string; risk: s
       <h3 className="font-serif text-[20px] font-semibold leading-snug text-navy">
         {issue.question}
       </h3>
-      <div className="mt-5 space-y-3 text-[14px] leading-7 text-gray-600">
+      <div className="mt-5 space-y-3 text-[14.5px] leading-[1.65] text-gray-600">
         <p>
           <span className="font-semibold text-gray-900">风险　</span>
           {issue.risk}

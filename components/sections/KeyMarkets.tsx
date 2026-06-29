@@ -52,7 +52,7 @@ export function KeyMarkets() {
           </div>
           <div className="p-6 lg:p-7">
             <p className="text-[15px] font-semibold text-navy">{market.subtitle}</p>
-            <p className="mt-3 text-[14px] leading-7 text-gray-600">{market.description}</p>
+            <p className="mt-3 text-[14.5px] leading-[1.65] text-gray-600">{market.description}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {market.industries.map((ind) => (
                 <span

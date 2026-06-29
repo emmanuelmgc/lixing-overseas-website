@@ -27,9 +27,9 @@ const credentials = [
 
 export function TrustBar() {
   return (
-    <section className="border-y border-line/60 bg-white">
-      <Container className="max-w-[1160px]">
-        <div className="grid grid-cols-2 gap-y-8 py-12 lg:grid-cols-4 lg:divide-x lg:divide-line/50">
+    <section className="border-y border-line/60 bg-[#FAFAF8]">
+      <Container className="max-w-[1200px]">
+        <div className="grid grid-cols-2 gap-y-8 py-11 lg:grid-cols-4 lg:divide-x lg:divide-line/50">
           {credentials.map((item, index) => (
             <article
               key={index}
@@ -45,7 +45,7 @@ export function TrustBar() {
                 {item.label}
               </p>
               {item.note ? (
-                <p className="mt-1.5 text-[13px] leading-5 text-gray-500">{item.note}</p>
+                <p className="mt-1.5 text-[13.5px] leading-5 text-gray-500">{item.note}</p>
               ) : null}
             </article>
           ))}

@@ -41,24 +41,24 @@ export function HeroSection({
                 sizes="52vw"
                 className="object-cover object-[50%_42%] saturate-[0.96] contrast-[1.03]"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,#071A2F_0%,rgba(7,26,47,0.88)_20%,rgba(7,26,47,0.36)_52%,rgba(7,26,47,0.12)_80%,rgba(7,26,47,0.22)_100%)]" />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,26,47,0.18)_0%,rgba(7,26,47,0.04)_40%,rgba(7,26,47,0.72)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,#071A2F_0%,rgba(7,26,47,0.65)_18%,rgba(7,26,47,0.22)_48%,rgba(7,26,47,0.08)_78%,rgba(7,26,47,0.14)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,26,47,0.12)_0%,rgba(7,26,47,0.02)_42%,rgba(7,26,47,0.50)_100%)]" />
             </div>
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,#071A2F_0%,rgba(7,26,47,0.97)_40%,rgba(7,26,47,0.52)_64%,rgba(7,26,47,0.16)_100%)]" aria-hidden="true" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,#071A2F_0%,rgba(7,26,47,0.80)_38%,rgba(7,26,47,0.35)_60%,rgba(7,26,47,0.10)_100%)]" aria-hidden="true" />
           </>
         ) : null}
 
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#071A2F] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#071A2F] to-transparent" />
 
-        <Container className="relative flex min-h-[720px] max-w-[1160px] items-center pb-20 pt-28 md:pt-24">
-          <div className="max-w-[560px]">
+        <Container className="relative flex min-h-[720px] max-w-[1200px] items-center pb-20 pt-28 md:pt-24">
+          <div className="max-w-[540px]">
             <p className="mb-6 text-xs font-semibold tracking-[0.18em] text-[#D7B476]">
               {eyebrow}
             </p>
-            <h1 className="whitespace-pre-line font-serif text-5xl font-semibold leading-[1.1] tracking-[-0.01em] text-white sm:text-6xl lg:text-[68px]">
+            <h1 className="whitespace-pre-line font-serif text-5xl font-semibold leading-[1.15] tracking-[-0.01em] text-white sm:text-6xl lg:text-[68px]">
               {title}
             </h1>
-            <p className="mt-8 max-w-[520px] text-base leading-[1.85] text-white/72 md:text-[17px]">
+            <p className="mt-8 max-w-[500px] text-[16.5px] leading-[1.9] text-white/76 md:text-[18px]">
               {subtitle}
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -81,7 +81,7 @@ export function HeroSection({
                 </Link>
               ) : null}
             </div>
-            <p className="mt-10 text-[13px] font-medium tracking-wide text-white/45">
+            <p className="mt-10 text-[13.5px] font-medium tracking-wide text-white/55">
               9 年出海服务经验 · 300+ 政企客户 · 聚焦中亚与法语区
             </p>
           </div>
