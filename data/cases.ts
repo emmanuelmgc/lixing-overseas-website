@@ -63,7 +63,7 @@ export const cases: CaseItem[] = [
     action: "以法国为测试窗口，设计活动露出、媒体沟通和本土化表达路径，再判断是否延伸到欧洲与非洲法语区国家。",
     result: "形成法语区市场测试方案和品牌升级建议。",
     deliverables: ["传播主题", "活动建议", "媒体资源", "本土化方向"],
-    image: "/images/lixing/ppt-france-workshop.webp",
+    image: "/images/lixing/case-fr-brand.webp",
   },
   {
     title: "企业家团组欧洲与香港商务考察",
@@ -76,7 +76,7 @@ export const cases: CaseItem[] = [
     action: "设计欧洲投资政策、企业交流、人力资源合作与香港上市路径等主题交流，组织关键嘉宾参与。",
     result: "帮助团员建立目的地判断框架，并沉淀后续合作方向。",
     deliverables: ["主题行程", "嘉宾邀约", "交流议题", "考察总结"],
-    image: "/images/lixing/ppt-delegation-formal.webp",
+    image: "/images/lixing/case-eu-hk.webp",
   },
   {
     title: "日本康养行业考察与人才交流合作",
@@ -89,6 +89,6 @@ export const cases: CaseItem[] = [
     action: "安排行业机构考察和专业交流，协助客户梳理可合作的人才培训与交流方向。",
     result: "推动客户与日本康养机构形成后续人才交流培训计划。",
     deliverables: ["考察安排", "机构交流", "合作方向", "培训计划建议"],
-    image: "/images/lixing/ppt-business-briefing.webp",
+    image: "/images/lixing/case-jp-eldercare.webp",
   },
 ];

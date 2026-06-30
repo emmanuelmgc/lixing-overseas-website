@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function ResourcesPage() {
   return (
     <>
-      <HeroSection compact eyebrow="Resources" title="资源不是名单，而是能被项目调用的连接" subtitle="我们不做普通 Logo 墙，而是把资源放进机会验证、合作方筛选、落地判断和市场测试流程里。" image="/images/lixing/ppt-boardroom-dialogue.webp" primary="告诉我们你需要哪类资源" />
+      <HeroSection compact eyebrow="Resources" title="资源不是名单，而是能被项目调用的连接" subtitle="我们不做普通 Logo 墙，而是把资源放进机会验证、合作方筛选、落地判断和市场测试流程里。" image="/images/lixing/service-project-landing.webp" primary="告诉我们你需要哪类资源" />
       <section className="py-16 md:py-24"><Container><ResourceNetwork /></Container></section>
       <section className="bg-mist py-16 md:py-24">
         <Container>

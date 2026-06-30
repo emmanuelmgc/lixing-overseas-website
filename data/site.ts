@@ -11,6 +11,11 @@ export const site = {
     phone: "（+86）13631333154",
     wechat: "同手机号",
   },
+  legal: {
+    // 占位符：上线前需替换为实际备案号
+    icp: "沪ICP备2024XXXXXX号-1",
+    copyright: "© 2026 励行出海 (LEXON Overseas). All rights reserved.",
+  },
 };
 
 export const navItems = [

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function DestinationsPage() {
   return (
     <>
-      <HeroSection compact eyebrow="Destinations" title="选择市场，比盲目出海更重要" subtitle="励行帮助企业先判断区域是否适合行业、预算和当前阶段，再设计商务考察、资源对接与落地路径。" image="/images/lixing/ppt-site-visit.webp" primary="预约市场筛选" />
+      <HeroSection compact eyebrow="Destinations" title="选择市场，比盲目出海更重要" subtitle="励行帮助企业先判断区域是否适合行业、预算和当前阶段，再设计商务考察、资源对接与落地路径。" image="/images/lixing/dest-uz-main.webp" primary="预约市场筛选" />
       <section className="py-16 md:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">

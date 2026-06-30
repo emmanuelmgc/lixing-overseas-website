@@ -19,7 +19,7 @@ export default function AboutPage() {
   ];
   return (
     <>
-      <HeroSection compact eyebrow="About" title="我们关注的不只是一次出访，而是一次出海判断" subtitle="励行出海把目的地选择、资源对接、商务考察和落地服务放进同一个判断流程里，帮助企业更稳地进入新兴市场。" image="/images/lixing/ppt-delegation-formal.webp" primary="联系励行" />
+      <HeroSection compact eyebrow="About" title="我们关注的不只是一次出访，而是一次出海判断" subtitle="励行出海把目的地选择、资源对接、商务考察和落地服务放进同一个判断流程里，帮助企业更稳地进入新兴市场。" image="/images/lixing/service-project-landing.webp" primary="联系励行" />
       <section className="py-16 md:py-24">
         <Container>
           <SectionHeader title="关于励行出海" intro="我们不把官网做成口号集合，而是说明我们如何进入项目、如何形成判断、如何帮助客户走下一步。" />

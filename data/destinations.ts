@@ -35,7 +35,7 @@ export const destinationDetails = {
     title: "法语区国家",
     hero: "以法国为窗口，测试法语区市场",
     intro: "适合消费品、教育、文旅、健康产品、服务贸易等客户，从法国活动、媒体与渠道切入，再判断欧洲、非洲法语区国家市场。",
-    image: "/images/lixing/ppt-francophone-city.webp",
+    image: "/images/lixing/market-francophone-paris.webp",
     sections: [
       { title: "法国适合做什么", items: ["品牌", "活动", "文化", "教育", "媒体", "渠道"] },
       { title: "欧洲 / 非洲法语区国家适合做什么", items: ["消费品", "轻工业", "医药健康", "服务贸易", "教育合作"] },

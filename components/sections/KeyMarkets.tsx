@@ -20,7 +20,7 @@ const markets = [
     description:
       "以法国为窗口，连接品牌活动、媒体资源与文化场景，测试欧洲与非洲法语区市场的受众反馈与渠道机会。",
     industries: ["消费品牌", "教育合作", "健康产品", "服务贸易", "法语区市场测试"],
-    image: "/images/lixing/ppt-francophone-city.webp",
+    image: "/images/lixing/market-francophone-paris.webp",
     href: "/destinations/francophone-markets",
     cta: "查看法语区方案",
   },

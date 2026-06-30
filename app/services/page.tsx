@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <HeroSection compact eyebrow="Services" title="把出海拆成可判断、可执行、可落地的步骤" subtitle="从市场筛选、商务考察到落地服务和海外营销咨询，励行关注的是判断是否成立，以及下一步怎么推进。" image="/images/lixing/ppt-business-briefing.webp" primary="预约服务沟通" />
+      <HeroSection compact eyebrow="Services" title="把出海拆成可判断、可执行、可落地的步骤" subtitle="从市场筛选、商务考察到落地服务和海外营销咨询，励行关注的是判断是否成立，以及下一步怎么推进。" image="/images/lixing/service-business-visit.webp" primary="预约服务沟通" />
       <section className="py-16 md:py-24"><Container><ServicePath /></Container></section>
       <section className="bg-mist py-16 md:py-24">
         <Container>
