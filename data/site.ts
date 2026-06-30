@@ -9,7 +9,7 @@ export const site = {
   contact: {
     address: "广州市天河区临江大道5号保利中心2302",
     phone: "（+86）13631333154",
-    wechat: "同手机号",
+    wechat: "sesamesly",
   },
   legal: {
     // 占位符：上线前需替换为实际备案号
