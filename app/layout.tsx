@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
+import { SiteFrame } from "@/components/layout/SiteFrame";
 import { seo, site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -22,10 +23,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="zh-CN">
       <body className="font-sans antialiased">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <MobileStickyCTA />
+        <SiteFrame header={<Header />} footer={<Footer />} mobileAction={<MobileStickyCTA />}>
+          {children}
+        </SiteFrame>
       </body>
     </html>
   );

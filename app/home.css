@@ -1,0 +1,229 @@
+  .lexon-home {
+    --navy: #071a2f;
+    --deep: #061526;
+    --paper: #f6f4ee;
+    --white: #fff;
+    --ink: #12273a;
+    --muted: #495d6e;
+    --gold: #d7a870;
+    --line: #d8ddd9;
+    --serif: "Noto Serif SC", "Songti SC", "STSong", SimSun, serif;
+    --sans: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+    --gutter: clamp(20px, 5.7vw, 84px);
+  }
+  .lexon-home *, .lexon-home *::before, .lexon-home *::after { box-sizing: border-box; }
+  .lexon-home { color: var(--ink); background: var(--paper); font: 16px/1.7 var(--sans); }
+  body:has(.lexon-home dialog[open]) { overflow: hidden; }
+  .lexon-home a { color: inherit; text-decoration: none; }
+  .lexon-home button { color: inherit; font: inherit; }
+  .lexon-home img { display: block; width: 100%; height: auto; }
+  .lexon-home h1, .lexon-home h2, .lexon-home h3, .lexon-home p, .lexon-home figure { margin: 0; }
+  .lexon-home h1, .lexon-home h2, .lexon-home h3 { text-wrap: balance; }
+  .lexon-home h1, .lexon-home h2 { font-family: var(--serif); }
+  .lexon-home h2 { font-size: clamp(34px, 3.5vw, 53px); letter-spacing: -.045em; line-height: 1.22; }
+  .lexon-home [id] { scroll-margin-top: 94px; }
+  .lexon-home :focus-visible { outline: 2px solid #97632c; outline-offset: 5px; }
+  .lexon-home .dark :focus-visible { outline-color: #f7c78a; }
+  .lexon-home .wrap { width: min(100% - 2 * var(--gutter), 1272px); margin-inline: auto; }
+  .lexon-home .skip { position: absolute; top: 8px; left: 8px; padding: 9px 14px; background: white; z-index: 9; transform: translateY(-160%); }
+  .lexon-home .skip:focus { transform: none; }
+  .lexon-home .dark { color: #fff; background: var(--navy); }
+  .lexon-home .header { position: relative; z-index: 2; border-bottom: 1px solid #ffffff25; background: var(--deep); }
+  .lexon-home .header-inner { min-height: 77px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .lexon-home .brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
+  .lexon-home .brand img { width: 157px; margin-inline-start: -8px; }
+  .lexon-home .nav { display: flex; align-items: center; gap: clamp(21px, 3.2vw, 47px); margin-inline-start: auto; }
+  .lexon-home .nav a { padding-block: 12px; font-size: 14px; color: #e2e9ef; white-space: nowrap; }
+  .lexon-home .nav a:hover { color: var(--gold); }
+  .lexon-home .nav-toggle { display: none; }
+  .lexon-home .button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; padding: 12px 20px; min-height: 46px; font-size: 14px; font-weight: 700; line-height: 1.3; white-space: nowrap; cursor: pointer; }
+  .lexon-home .button-gold { border: 1px solid var(--gold); background: var(--gold); color: var(--deep); }
+  .lexon-home .button-gold:hover { background: #efc58e; border-color: #efc58e; }
+  .lexon-home .button-outline { border: 1px solid #ffffff50; color: #fff; background: transparent; }
+  .lexon-home .button-outline:hover { border-color: var(--gold); color: var(--gold); }
+  .lexon-home .header .button { padding: 9px 16px; min-height: 41px; }
+  .lexon-home .word { white-space: nowrap; }
+  .lexon-home .arrow { font: 400 20px/1 Georgia, serif; }
+  .lexon-home .hero { position: relative; isolation: isolate; overflow: hidden; background: var(--deep); }
+  .lexon-home .hero-image { position: absolute; inset: 0 0 0 36%; z-index: -2; }
+  .lexon-home .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: 74% 50%; }
+  .lexon-home .hero::after { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(90deg, var(--deep) 0%, var(--deep) 30%, #061526ed 39%, #06152656 60%, #06152612 100%); }
+  .lexon-home .hero-inner { min-height: clamp(495px, 42vw, 615px); display: flex; align-items: center; padding-block: 70px 77px; }
+  .lexon-home .hero-copy { max-width: 606px; }
+  .lexon-home .hero-context { color: #efc494; font-size: 14px; font-weight: 700; letter-spacing: .16em; display: flex; align-items: center; gap: 12px; margin-bottom: 23px; }
+  .lexon-home .hero-context::before { content: ""; display: block; width: 30px; height: 1px; background: var(--gold); }
+  .lexon-home h1 { font-size: clamp(45px, 5.2vw, 77px); line-height: 1.19; letter-spacing: -.06em; font-weight: 700; }
+  .lexon-home h1 span { display: block; }
+  .lexon-home .hero-copy > p:not(.hero-context) { max-width: 30em; text-wrap: pretty; color: #e0e8f0; font-size: clamp(15px, 1.3vw, 18px); line-height: 1.9; margin-top: 25px; }
+  .lexon-home .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 31px; }
+  .lexon-home .proof { background: var(--paper); border-bottom: 1px solid var(--line); }
+  .lexon-home .proof-grid { display: grid; grid-template-columns: .87fr 1fr 1.65fr; padding-block: 22px; }
+  .lexon-home .proof-item { display: flex; align-items: center; gap: 13px; min-height: 57px; padding-inline: clamp(16px, 3vw, 42px); border-left: 1px solid var(--line); }
+  .lexon-home .proof-item:first-child { border: 0; padding-inline-start: 0; }
+  .lexon-home .proof-item strong { font: 700 clamp(27px, 2.8vw, 42px)/1 Georgia, var(--serif); letter-spacing: -.045em; white-space: nowrap; }
+  .lexon-home .proof-item span { color: var(--muted); font-size: 13px; line-height: 1.45; }
+  .lexon-home .proof-item:last-child { display: grid; align-content: center; gap: 3px; }
+  .lexon-home .proof-item:last-child strong { font: 700 17px/1.4 var(--sans); letter-spacing: .03em; }
+  .lexon-home .section { padding-block: clamp(65px, 7vw, 104px); }
+  .lexon-home .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 33px; }
+  .lexon-home .section-head p { max-width: 31em; color: var(--muted); font-size: 15px; }
+  .lexon-home .section-rule { display: block; width: 33px; height: 2px; background: #a8733e; margin-bottom: 14px; }
+  .lexon-home .case-grid { display: grid; grid-template-columns: 1.38fr 1fr; grid-template-rows: repeat(2, minmax(209px, auto)); gap: 16px; }
+  .lexon-home .case-feature, .lexon-home .case-minor { position: relative; }
+  .lexon-home .case-link { display: block; position: relative; height: 100%; color: inherit; }
+  .lexon-home .case-feature { grid-row: span 2; background: var(--navy); color: white; min-height: 460px; }
+  .lexon-home .case-feature .case-link { display: flex; align-items: end; isolation: isolate; }
+  .lexon-home .case-feature .case-photo { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+  .lexon-home .case-feature .case-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, #061526fa 0%, #061526df 22%, #0615265f 58%, #06152604 100%); }
+  .lexon-home .case-photo img { height: 100%; object-fit: cover; }
+  .lexon-home .case-feature .case-photo img { object-position: 50% 45%; }
+  .lexon-home .case-feature .case-body { padding: 30px 35px; width: 100%; }
+  .lexon-home .case-place { font-size: 13px; letter-spacing: .055em; color: var(--muted); }
+  .lexon-home .case-feature .case-place { color: #e2e8ef; }
+  .lexon-home .case-feature h3 { font: 700 clamp(27px, 2.5vw, 39px)/1.24 var(--serif); margin-block: 5px 12px; }
+  .lexon-home .case-feature .case-desc { color: #e1e8ef; font-size: 14px; max-width: 33em; padding-right: 16px; text-wrap: pretty; }
+  .lexon-home .case-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; margin-top: 16px; }
+  .lexon-home .case-feature .case-meta strong { color: #f1c696; font-size: 15px; }
+  .lexon-home .case-meta span { font-size: 13px; }
+  .lexon-home .case-feature .case-meta span { color: #e2e8ef; }
+  .lexon-home .case-open { position: absolute; right: 14px; bottom: 14px; display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #75839466; font: 400 20px/1 Georgia, serif; }
+  .lexon-home .case-feature .case-open { right: 27px; bottom: 28px; border-color: #ffffff60; }
+  .lexon-home .case-link:hover .case-open { background: var(--navy); color: white; border-color: var(--navy); }
+  .lexon-home .case-feature .case-link:hover .case-open { background: var(--gold); color: var(--deep); border-color: var(--gold); }
+  .lexon-home .case-minor { background: #fff; box-shadow: inset 0 0 0 1px var(--line); }
+  .lexon-home .case-minor .case-link { display: grid; grid-template-columns: 39% 1fr; }
+  .lexon-home .case-minor .case-photo { min-width: 0; overflow: hidden; }
+  .lexon-home .case-minor .case-body { align-self: center; padding: 20px 21px 54px; }
+  .lexon-home .case-minor h3 { font-size: clamp(18px, 1.6vw, 24px); line-height: 1.32; margin-block: 4px 7px; }
+  .lexon-home .case-minor .case-desc { font-size: 14px; text-wrap: pretty; color: var(--muted); }
+  .lexon-home .case-minor .case-meta { position: absolute; bottom: 21px; margin: 0; font-size: 13px; }
+  .lexon-home .case-minor .case-meta strong { color: #714b22; }
+  .lexon-home .media-note { font-size: 12px; color: var(--muted); padding-top: 12px; }
+  .lexon-home .services { background: white; border-block: 1px solid var(--line); }
+  .lexon-home .service-list { border-top: 1px solid #a6b0b8; }
+  .lexon-home .service { border-bottom: 1px solid var(--line); }
+  .lexon-home .service summary { list-style: none; display: grid; grid-template-columns: .95fr 1.25fr 39px; align-items: center; gap: 25px; cursor: pointer; padding-block: 25px; }
+  .lexon-home .service summary::-webkit-details-marker { display: none; }
+  .lexon-home .service h3 { font: 700 clamp(23px, 2.1vw, 32px)/1.3 var(--serif); }
+  .lexon-home .service-lead { display: grid; gap: 3px; }
+  .lexon-home .service-lead strong { font-size: 16px; }
+  .lexon-home .service-lead span { color: var(--muted); font-size: 14px; }
+  .lexon-home .service-indicator { display: grid; place-items: center; min-width: 37px; height: 37px; border: 1px solid #aeb9c3; font: 400 22px/1 Georgia, serif; }
+  .lexon-home .service-indicator::before { content: "+"; }
+  .lexon-home .service[open] .service-indicator::before { content: "−"; }
+  .lexon-home .service summary:hover .service-indicator, .lexon-home .service[open] .service-indicator { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .lexon-home .service-detail { margin-left: calc((100% - 89px) * .4318 + 25px); margin-bottom: 25px; max-width: 45em; padding-inline: 16px; border-left: 2px solid var(--gold); color: var(--muted); font-size: 14px; }
+  .lexon-home .service-detail strong { color: var(--ink); }
+  .lexon-home .service-detail p + p { margin-top: 7px; }
+  .lexon-home .market-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .lexon-home .market { display: grid; grid-template-columns: 39% 1fr; min-height: 186px; background: #fff; border: 1px solid var(--line); }
+  .lexon-home .market img { height: 100%; min-height: 154px; object-fit: cover; }
+  .lexon-home .market-body { align-self: center; padding: 20px; }
+  .lexon-home .market h3 { font-size: clamp(18px, 1.75vw, 24px); line-height: 1.35; }
+  .lexon-home .market p { margin-top: 7px; font-size: 14px; color: var(--muted); }
+  .lexon-home .about { border-top: 1px solid var(--line); padding-block: 52px 59px; }
+  .lexon-home .about-inner { display: grid; grid-template-columns: .9fr 1.1fr; gap: 22px 50px; align-items: start; }
+  .lexon-home .about h2 { font-size: clamp(27px, 2.7vw, 39px); }
+  .lexon-home .about p { color: var(--muted); font-size: 15px; }
+  .lexon-home .about p + p { margin-top: 12px; }
+  .lexon-home .contact { border-top: 1px solid #ffffff25; }
+  .lexon-home .contact-inner { padding-block: 54px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .lexon-home .contact h2 { font-size: clamp(30px, 3.7vw, 49px); }
+  .lexon-home .contact p { color: #c6d2df; margin-top: 10px; font-size: 15px; }
+  .lexon-home .footer { border-top: 1px solid #ffffff28; }
+  .lexon-home .footer-inner { display: flex; justify-content: space-between; align-items: center; min-height: 73px; gap: 16px; }
+  .lexon-home .footer p, .lexon-home .footer a:not(.brand) { font-size: 13px; color: #d3dce5; }
+  .lexon-home .footer .brand img { width: 130px; }
+  .lexon-home dialog { width: min(680px, calc(100% - 32px)); max-height: min(88dvh, 860px); padding: 0; border: 0; background: white; color: var(--ink); box-shadow: 0 24px 96px #0007; }
+  .lexon-home dialog::backdrop { background: #061526bd; }
+  .lexon-home .dialog-inner { padding: 30px clamp(20px, 5vw, 43px) 38px; }
+  .lexon-home .dialog-head { display: flex; justify-content: space-between; gap: 10px; align-items: start; margin-bottom: 18px; }
+  .lexon-home .dialog-head h2 { font-size: clamp(24px, 4vw, 35px); }
+  .lexon-home .dialog-close { width: 42px; height: 42px; flex: 0 0 42px; background: var(--paper); border: 1px solid var(--line); font-size: 24px; cursor: pointer; }
+  .lexon-home .dialog-close:hover { background: #e5e9ed; }
+  .lexon-home .dialog-inner figure img { width: 100%; aspect-ratio: 2.3 / 1; object-fit: cover; }
+  .lexon-home .dialog-inner figcaption { color: var(--muted); font-size: 12px; margin-block: 6px 17px; }
+  .lexon-home .dialog-inner p { color: var(--muted); font-size: 15px; }
+  .lexon-home .dialog-inner p + p { margin-top: 10px; }
+  .lexon-home .dialog-inner strong { color: var(--ink); }
+  @media (max-width: 1040px) {
+    .lexon-home .hero-inner { min-height: 490px; }
+    .lexon-home .hero-copy { max-width: 525px; }
+    .lexon-home .case-grid { grid-template-columns: 1.14fr 1fr; }
+    .lexon-home .case-minor .case-link { grid-template-columns: 35% 1fr; }
+    .lexon-home .case-minor .case-body { padding-inline: 15px; }
+    .lexon-home .market { grid-template-columns: 33% 1fr; }
+  }
+  @media (max-width: 760px) {
+    .lexon-home .header-inner { min-height: 60px; gap: 10px; }
+    .lexon-home .brand img { width: 137px; margin-inline-start: -7px; }
+    .lexon-home .header .button { display: none; }
+    .lexon-home .nav-toggle { display: inline-flex; align-items: center; padding: 5px 10px; min-height: 40px; background: transparent; border: 1px solid #ffffff56; color: #fff; font-size: 13px; cursor: pointer; }
+    .lexon-home .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-wrap: wrap; padding: 9px var(--gutter); background: var(--deep); border-bottom: 1px solid #ffffff45; gap: 6px 20px; }
+    .lexon-home.menu-open .nav { display: flex; }
+    .lexon-home .hero-inner { min-height: 0; padding-block: 43px 0; }
+    .lexon-home .hero-context { margin-bottom: 16px; font-size: 13px; }
+    .lexon-home h1 { font-size: clamp(37px, 8.8vw, 58px); letter-spacing: -.045em; }
+    .lexon-home .hero-copy > p:not(.hero-context) { margin-top: 17px; }
+    .lexon-home .hero-actions { margin-top: 22px; gap: 10px; }
+    .lexon-home .hero-actions .button { padding-inline: 14px; gap: 8px; }
+    .lexon-home .hero { display: flex; flex-direction: column; }
+    .lexon-home .hero-image { position: relative; order: 2; inset: auto; min-height: 180px; margin-top: 20px; height: 41vw; max-height: 280px; }
+    .lexon-home .hero-image img { object-position: 75% 48%; }
+    .lexon-home .hero-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, #061526 0%, #06152602 34%); }
+    .lexon-home .hero::after { display: none; }
+    .lexon-home .proof-grid { grid-template-columns: 1fr 1fr; padding-block: 12px; }
+    .lexon-home .proof-item { min-height: 49px; gap: 7px; padding-inline: 10px 0; }
+    .lexon-home .proof-item strong { font-size: clamp(21px, 5.7vw, 34px); }
+    .lexon-home .proof-item span { font-size: 11px; }
+    .lexon-home .proof-item:last-child { grid-column: span 2; border-left: 0; border-top: 1px solid var(--line); padding: 10px 0 0; margin-top: 7px; display: flex; justify-content: space-between; align-items: center; min-height: 0; }
+    .lexon-home .proof-item:last-child strong { font-size: 13px; }
+    .lexon-home .section { padding-block: 49px 57px; }
+    .lexon-home .section-head { display: grid; gap: 9px; margin-bottom: 23px; }
+    .lexon-home .section-rule { margin-bottom: 10px; }
+    .lexon-home .case-grid { display: grid; grid-template-columns: 1fr; grid-template-rows: none; gap: 11px; }
+    .lexon-home .case-feature { grid-row: auto; min-height: 355px; }
+    .lexon-home .case-feature .case-body { padding: 24px 23px 27px; }
+    .lexon-home .case-feature .case-desc { max-width: 30em; padding-right: 10px; }
+    .lexon-home .case-feature .case-open { right: 16px; bottom: 18px; }
+    .lexon-home .case-minor .case-link { min-height: 165px; grid-template-columns: 37% 1fr; }
+    .lexon-home .case-minor .case-body { padding: 13px 14px 42px; }
+    .lexon-home .case-minor .case-desc { font-size: 13px; }
+    .lexon-home .case-minor .case-meta { bottom: 13px; font-size: 12px; }
+    .lexon-home .case-open { width: 30px; height: 30px; right: 10px; bottom: 9px; }
+    .lexon-home .service summary { grid-template-columns: minmax(0, 1fr) 36px; gap: 7px 13px; padding-block: 17px; }
+    .lexon-home .service-lead { grid-column: 1; grid-row: 2; }
+    .lexon-home .service-lead strong { font-size: 14px; }
+    .lexon-home .service-lead span { font-size: 13px; }
+    .lexon-home .service-indicator { grid-row: 1 / span 2; grid-column: 2; min-width: 34px; height: 34px; }
+    .lexon-home .service-detail { margin-left: 0; padding-right: 13px; }
+    .lexon-home .market-grid { grid-template-columns: 1fr; gap: 11px; }
+    .lexon-home .market { grid-template-columns: 35% 1fr; min-height: 139px; }
+    .lexon-home .market img { min-height: 139px; }
+    .lexon-home .market-body { padding: 15px 13px; }
+    .lexon-home .market p { font-size: 13px; }
+    .lexon-home .about { padding-block: 35px 43px; }
+    .lexon-home .about-inner { grid-template-columns: 1fr; gap: 12px; }
+    .lexon-home .contact-inner { display: grid; padding-block: 39px; gap: 17px; }
+    .lexon-home .contact-inner .button { justify-self: start; }
+    .lexon-home .footer-inner { flex-wrap: wrap; padding-block: 13px; gap: 5px 12px; }
+    .lexon-home .footer p { flex-basis: 100%; order: 3; }
+  }
+  @media (max-width: 355px) {
+    .lexon-home .proof-item { flex-wrap: wrap; align-content: center; gap: 3px; }
+    .lexon-home .proof-item:last-child { display: grid; }
+    .lexon-home .case-feature h3 { font-size: 23px; }
+    .lexon-home .case-feature .case-meta { padding-right: 35px; }
+    .lexon-home .case-minor .case-meta { font-size: 11px; }
+    .lexon-home .case-minor .case-link { grid-template-columns: 31% 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { html:has(.lexon-home) { scroll-behavior: auto; } }
+.lexon-home .footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+}
+.lexon-home .footer-links a:hover { text-decoration: underline; }
+
+.lexon-home .market h3 a:hover { text-decoration: underline; }
