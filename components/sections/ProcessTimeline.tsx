@@ -24,7 +24,7 @@ export function ProcessTimeline() {
               </span>
             </div>
             <h3 className="mt-3 text-[15px] font-semibold text-navy">{step.title}</h3>
-            <p className="mt-2 text-[13px] leading-6 text-gray-500">{step.body}</p>
+            <p className="mt-2 text-[15px] leading-relaxed text-gray-500">{step.body}</p>
           </div>
         );
       })}

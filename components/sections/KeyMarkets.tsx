@@ -65,7 +65,7 @@ export function KeyMarkets() {
             </div>
             <Link
               href={market.href}
-              className="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-gold"
+              className="mt-6 inline-flex items-center gap-1.5 text-[15px] font-semibold text-gold"
               aria-label={market.cta}
             >
               {market.cta}

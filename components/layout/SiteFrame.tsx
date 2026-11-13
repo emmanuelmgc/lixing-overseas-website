@@ -18,9 +18,9 @@ export function SiteFrame({ children, header, footer, mobileAction }: SiteFrameP
   return (
     <>
       {header}
-      <main>{children}</main>
-      {footer}
-      {mobileAction}
+      <main className="site-inner">{children}</main>
+      <div className={pathname === "/contact" ? undefined : "site-footer-with-mobile-action"}>{footer}</div>
+      {pathname !== "/contact" ? mobileAction : null}
     </>
   );
 }

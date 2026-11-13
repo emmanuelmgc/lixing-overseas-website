@@ -14,12 +14,12 @@ export default function CookiePage() {
       <section className="bg-[#FAFAF8] py-16 md:py-20">
         <Container>
           <div className="max-w-3xl">
-            <Link href="/" className="inline-flex items-center gap-1.5 text-[13px] text-gray-600 hover:text-gold">
+            <Link href="/" className="inline-flex items-center gap-1.5 text-[15px] text-gray-600 hover:text-gold">
               <ArrowLeft className="h-3.5 w-3.5" />
               返回首页
             </Link>
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-gold">Legal</p>
-            <h1 className="mt-3 font-serif text-4xl font-semibold text-navy md:text-5xl">Cookie 说明</h1>
+            <p className="inner-kicker mt-6">Legal</p>
+            <h1 className="inner-page-title mt-3 text-navy">Cookie 说明</h1>
             <p className="mt-4 text-[14px] text-gray-500">最后更新：2026 年 1 月</p>
           </div>
         </Container>
@@ -27,7 +27,7 @@ export default function CookiePage() {
 
       <section className="bg-white py-16 md:py-20">
         <Container>
-          <div className="prose prose-lg max-w-3xl space-y-6 text-[15px] leading-[1.85] text-gray-700">
+          <div className="prose prose-lg max-w-3xl space-y-6 text-[16px] leading-[1.8] text-gray-700">
             <p>
               本网站使用 Cookie 和同类技术为您提供更流畅、更安全的访问体验。本说明解释我们使用的 Cookie 类型及其用途。
             </p>

@@ -7,9 +7,11 @@ import { Container } from "@/components/ui/Container";
 type HeroSectionProps = {
   eyebrow: string;
   title: string;
+  titlePhrases?: readonly string[];
   subtitle: string;
   image?: string;
   primary?: string;
+  primaryHref?: string;
   secondary?: string;
   secondaryHref?: string;
   compact?: boolean;
@@ -18,9 +20,11 @@ type HeroSectionProps = {
 export function HeroSection({
   eyebrow,
   title,
+  titlePhrases,
   subtitle,
   image,
   primary = "预约出海诊断",
+  primaryHref = "/contact",
   secondary,
   secondaryHref = "/destinations",
   compact = false,
@@ -63,7 +67,7 @@ export function HeroSection({
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
-                href="/contact"
+                href={primaryHref}
                 aria-label={primary}
                 className="inline-flex items-center gap-1.5 rounded bg-gold px-7 py-3.5 text-[15px] font-semibold text-[#071A2F] transition hover:bg-gold/90"
               >
@@ -91,21 +95,23 @@ export function HeroSection({
   }
 
   return (
-    <section className={"relative overflow-hidden bg-rice " + (compact ? "pt-32 pb-16" : "pt-32 pb-20 md:pt-40 md:pb-28")}>
+    <section className="inner-hero relative overflow-hidden bg-rice pb-12 pt-12 md:pb-16 md:pt-16">
       <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-white to-transparent" />
-      <Container className="relative grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      <Container className="relative grid gap-7 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-12">
         <div>
-          <p className="mb-5 max-w-xl text-xs font-semibold uppercase tracking-[0.2em] text-gold">{eyebrow}</p>
-          <h1 className="max-w-3xl whitespace-pre-line font-serif text-4xl font-semibold leading-[1.1] text-navy md:text-6xl">{title}</h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-gray-600 md:text-lg">{subtitle}</p>
+          <p className="inner-kicker mb-4 max-w-xl">{eyebrow}</p>
+          <h1 className="inner-page-title max-w-3xl whitespace-pre-line text-navy">
+            {titlePhrases ? titlePhrases.map(phrase => <span key={phrase} className="inner-title-phrase">{phrase}</span>) : title}
+          </h1>
+          <p className="inner-intro mt-5 max-w-xl">{subtitle}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href="/contact" ariaLabel={primary}>{primary}</ButtonLink>
+            <ButtonLink href={primaryHref} ariaLabel={primary}>{primary}</ButtonLink>
             {secondary ? <ButtonLink href={secondaryHref} variant="secondary" ariaLabel={secondary}>{secondary}</ButtonLink> : null}
           </div>
         </div>
-        <div className="relative min-h-[440px] lg:min-h-[540px]">
-          <div className="absolute right-0 top-0 w-[86%] border border-white/20 bg-ink p-3 shadow-dossier">
-            <div className="relative aspect-[4/3] overflow-hidden bg-slateblue">
+        <div className="min-w-0">
+          <div className="border border-line bg-white p-2 md:p-3">
+            <div className="relative aspect-[5/3] overflow-hidden bg-slateblue">
               {image ? <Image src={image} alt="商务会议与项目考察现场" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover opacity-90" /> : null}
               <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent" />
             </div>

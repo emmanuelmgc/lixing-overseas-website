@@ -25,7 +25,7 @@ export function ButtonLink({
     <Link
       href={href}
       aria-label={ariaLabel}
-      className={`inline-flex items-center gap-1.5 rounded px-7 py-3.5 text-[15px] font-semibold transition ${styles} ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded-sm px-6 py-3.5 text-[16px] font-semibold transition ${styles} ${className}`}
     >
       {children}
       <ArrowRight className="h-4 w-4" aria-hidden="true" />

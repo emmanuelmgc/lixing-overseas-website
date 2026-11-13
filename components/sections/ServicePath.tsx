@@ -20,7 +20,7 @@ export function ServicePath() {
               className="object-cover opacity-85 transition duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/72 to-transparent" />
-            <div className="absolute left-5 top-5 rounded bg-gold px-2.5 py-1 text-[11px] font-semibold text-ink">
+            <div className="absolute left-5 top-5 rounded bg-gold px-2.5 py-1 text-[13px] font-semibold text-ink">
               {service.step}
             </div>
             <h3 className="absolute bottom-5 left-5 right-5 font-serif text-[22px] font-semibold text-white">
@@ -35,7 +35,7 @@ export function ServicePath() {
             </p>
             <Link
               href={service.href}
-              className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-semibold text-gold"
+              className="mt-5 inline-flex items-center gap-1.5 text-[15px] font-semibold text-gold"
               aria-label={`查看${service.title}服务`}
             >
               查看服务详情

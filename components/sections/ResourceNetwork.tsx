@@ -29,7 +29,7 @@ export function ResourceNetwork({ limit }: { limit?: number }) {
           <p className="mt-2 font-serif text-[18px] font-semibold leading-7 text-navy">
             客户问题 / 出海目标
           </p>
-          <p className="mt-2 text-[13px] leading-6 text-gray-500">
+          <p className="mt-2 text-[15px] leading-relaxed text-gray-500">
             判断市场、筛选合作方、设计落地路径
           </p>
         </div>
@@ -43,7 +43,7 @@ export function ResourceNetwork({ limit }: { limit?: number }) {
                 className="rounded-[8px] border border-line bg-mist/40 px-4 py-3.5 transition hover:border-gold/40 hover:bg-white"
               >
                 <p className="text-[14px] font-semibold text-navy">{node.label}</p>
-                <p className="mt-1 text-[12px] leading-5 text-gray-500">{node.desc}</p>
+                <p className="mt-1 text-[14px] leading-relaxed text-gray-500">{node.desc}</p>
               </div>
             ))}
           </div>

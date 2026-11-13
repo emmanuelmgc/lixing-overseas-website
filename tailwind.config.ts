@@ -19,7 +19,7 @@ const config: Config = {
       },
       fontFamily: {
         serif: ["Noto Serif SC", "Songti SC", "SimSun", "serif"],
-        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
+        sans: ["PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "system-ui", "sans-serif"]
       },
       boxShadow: {
         dossier: "0 20px 60px rgba(3,17,31,0.14)"

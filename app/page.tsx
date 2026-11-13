@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BrandLockup } from "@/components/layout/BrandLockup";
 import { HomeInteractions } from "@/components/layout/HomeInteractions";
 import { site } from "@/data/site";
 import "./home.css";
@@ -14,7 +15,7 @@ export default function HomePage() {
       <a className="skip" href="#main">跳到正文</a>
       <header className="header dark">
         <div className="wrap header-inner">
-          <a className="brand" href="#top" aria-label="励行出海首页"><img src="/images/lixing/logo-lexon-header-light.png" alt="LEXON 励行出海" width={360} height={96} /></a>
+          <BrandLockup />
           <button className="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">菜单</button>
           <nav className="nav" id="nav" aria-label="主导航">
             <a href="#markets">重点市场</a>
@@ -32,7 +33,7 @@ export default function HomePage() {
             <div className="hero-copy">
               <p className="hero-context">中亚与法语区新兴市场</p>
               <h1 id="hero-title"><span>从市场研判，</span><span>到海外项目落地</span></h1>
-              <p>为中国企业提供商务考察、产业出海落地与海外产业投资服务。</p>
+              <p>为中国企业提供<span className="word">商务考察、</span><wbr /><span className="word">产业出海落地</span>与<span className="word">海外产业投资服务。</span></p>
               <div className="hero-actions">
                 <a className="button button-gold" href="#contact">沟通出海需求 <span className="arrow" aria-hidden="true">↗</span></a>
                 <a className="button button-outline" href="#cases">查看项目案例 <span className="arrow" aria-hidden="true">↓</span></a>
@@ -176,11 +177,13 @@ export default function HomePage() {
       </main>
       <footer className="footer dark">
         <div className="wrap footer-inner">
-          <a className="brand" href="#top" aria-label="励行出海首页"><img src="/images/lixing/logo-lexon-header-light.png" alt="LEXON 励行出海" width={360} height={96} /></a>
+          <BrandLockup />
           <p>广州励行信息科技有限公司</p>
           <a href="#top">返回顶部 ↑</a>
           <div className="footer-links">
-            <a href="/resources">资源网络</a>
+            <a href="/services">全部服务</a>
+              <a href="/cases">全部案例</a>
+              <a href="/resources">资源网络</a>
             <a href="/legal/privacy">隐私政策</a>
             <a href="/legal/cookie">Cookie 政策</a>
           </div>

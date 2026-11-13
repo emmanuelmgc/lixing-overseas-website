@@ -21,15 +21,15 @@ export function DetailBlocks({
 }) {
   return (
     <>
-      <section className="bg-rice pt-32 pb-16 md:pt-40 md:pb-20">
-        <Container className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+      <section className="inner-hero bg-rice py-12 md:py-16">
+        <Container className="grid gap-7 lg:grid-cols-2 lg:items-center lg:gap-12">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-gold">{eyebrow}</p>
-            <h1 className="font-serif text-4xl font-semibold leading-tight text-navy md:text-6xl">{title}</h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">{intro}</p>
+            <p className="inner-kicker mb-4">{eyebrow}</p>
+            <h1 className="inner-page-title text-navy">{title}</h1>
+            <p className="inner-intro mt-5">{intro}</p>
             <ButtonLink href="/contact" className="mt-8" ariaLabel={cta}>{cta}</ButtonLink>
           </div>
-          <div className="border border-line bg-white p-3 shadow-dossier">
+          <div className="border border-line bg-white p-2 md:p-3">
             <div className="relative aspect-[5/3] overflow-hidden">
               <Image src={image} alt={`${title}页面现场素材`} fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover" />
             </div>
@@ -43,7 +43,7 @@ export function DetailBlocks({
             {sections.map((section) => (
               <article key={section.title} className="border border-line bg-white p-6">
                 <h2 className="font-serif text-2xl font-semibold text-navy">{section.title}</h2>
-                <ul className="mt-5 space-y-3 text-sm leading-6 text-gray-600">
+                <ul className="mt-5 space-y-3 text-[16px] leading-relaxed text-gray-600">
                   {section.items.map((item) => (
                     <li key={item} className="flex gap-2"><CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-gold" />{item}</li>
                   ))}

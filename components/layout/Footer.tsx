@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLockup } from "@/components/layout/BrandLockup";
 import { MapPin, Phone, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { navItems, site } from "@/data/site";
@@ -46,18 +47,12 @@ export function Footer() {
       />
 
       {/* LAYER 1 · 品牌主区 */}
-      <Container className="relative pb-12 pt-20 md:pb-16 md:pt-24">
+      <Container className="relative pb-9 pt-12 md:pb-12 md:pt-16">
         <div className="grid gap-12 md:grid-cols-[1.1fr_2fr] md:gap-16">
           {/* 左：品牌主区 */}
           <div>
-            <Link href="/" aria-label="LEXON 励行出海首页" className="inline-flex">
-              <img
-                src="/images/lixing/logo-lexon-full.png"
-                alt="LEXON 励行出海"
-                className="h-16 w-auto"
-              />
-            </Link>
-            <p className="mt-5 max-w-sm text-[14.5px] leading-[1.7] text-white/70">
+            <BrandLockup />
+            <p className="mt-5 max-w-sm text-[16px] leading-[1.7] text-white/70">
               {site.description}
             </p>
             <p className="mt-4 inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.18em] text-gold">
@@ -67,10 +62,10 @@ export function Footer() {
           </div>
 
           {/* 右：3 列链接 */}
-          <div className="grid gap-10 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
             {footerColumns.map((col) => (
               <div key={col.title}>
-                <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-gold/80">
+                <p className="mb-4 text-[14px] font-semibold text-[#efc494]">
                   {col.title}
                 </p>
                 <ul className="space-y-2.5">
@@ -78,7 +73,7 @@ export function Footer() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-[14px] text-white/75 transition hover:text-gold"
+                        className="text-[15px] text-white/75 transition hover:text-gold"
                       >
                         {link.label}
                       </Link>
@@ -96,7 +91,7 @@ export function Footer() {
 
       {/* LAYER 3 · 联系信息 */}
       <Container className="relative py-8">
-        <div className="flex flex-col gap-4 text-[13.5px] text-white/70 md:flex-row md:items-center md:justify-between md:gap-8">
+        <div className="flex flex-col gap-4 text-[15px] text-white/70 md:flex-row md:items-center md:justify-between md:gap-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8 sm:gap-y-2">
             <p className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
@@ -129,7 +124,7 @@ export function Footer() {
       {/* LAYER 4 · 备案 + 版权 */}
       <div className="border-t border-white/10">
         <Container className="py-6">
-          <div className="flex flex-col gap-2 text-[12px] text-white/45 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col gap-2 text-[12px] text-white/70 md:flex-row md:items-center md:justify-between">
             <p>{site.legal.copyright}</p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
               <span>{site.legal.icp}</span>

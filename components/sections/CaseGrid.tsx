@@ -24,12 +24,13 @@ export function CaseGrid({ items }: { items: CaseItem[] }) {
             key={filter}
             onClick={() => setActive(filter)}
             className={
-              "rounded border px-3 py-2 text-sm transition " +
+              "rounded border px-3.5 py-2.5 text-[15px] transition " +
               (active === filter
                 ? "border-gold bg-gold text-ink font-semibold"
                 : "border-line bg-white text-gray-700 hover:border-gold hover:text-navy")
             }
             type="button"
+            aria-pressed={active === filter}
           >
             {filter}
           </button>

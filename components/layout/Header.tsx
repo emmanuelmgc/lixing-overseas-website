@@ -3,42 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { navItems } from "@/data/site";
+import { BrandLockup } from "@/components/layout/BrandLockup";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const isHomeHero = pathname === "/" && !scrolled && !open;
-  const logoSrc = isHomeHero ? "/images/lixing/logo-lexon-header-light.png" : "/images/lixing/logo-lexon-header.png";
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        isHomeHero
-          ? "border-b border-white/[0.12] bg-[#071A2F]/[0.74] text-white shadow-[0_1px_24px_rgba(0,0,0,0.18)] backdrop-blur-md"
-          : "border-b border-line/70 bg-white/[0.92] text-navy shadow-sm backdrop-blur"
-      }`}
-    >
-      <Container className="flex h-[72px] items-center justify-between py-3">
-        <Link href="/" aria-label="LEXON 励行出海首页" className="flex items-center">
-          <img
-            src={logoSrc}
-            alt="LEXON 励行出海"
-            className={`h-[44px] w-auto sm:h-[48px] ${isHomeHero ? "drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]" : ""}`}
-          />
-        </Link>
+    <header className="site-header fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-[#061526] text-white">
+      <Container className="site-header-row flex items-center justify-between gap-6">
+        <BrandLockup />
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="主导航">
           {navItems.map((item) => {
@@ -47,17 +25,8 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative py-2 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:-bottom-2 after:h-px after:bg-gold after:transition-transform ${
-                  active ? "after:scale-x-100" : "after:scale-x-0"
-                } ${
-                  isHomeHero
-                    ? active
-                      ? "text-white"
-                      : "text-white/[0.78] hover:text-white"
-                    : active
-                      ? "text-navy"
-                      : "text-gray-700 hover:text-gold"
-                }`}
+                aria-current={active ? "page" : undefined}
+                className={`relative whitespace-nowrap py-2 text-[16px] transition-colors hover:text-white after:absolute after:inset-x-0 after:-bottom-2 after:h-px after:bg-gold ${active ? "text-white" : "text-white/80 after:hidden"}`}
               >
                 {item.label}
               </Link>
@@ -66,32 +35,30 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <ButtonLink href="/contact" ariaLabel="预约出海诊断">预约出海诊断</ButtonLink>
+          <ButtonLink href="/contact" ariaLabel="沟通出海需求">沟通出海需求</ButtonLink>
         </div>
 
         <button
           type="button"
           aria-label={open ? "关闭导航菜单" : "打开导航菜单"}
           onClick={() => setOpen((value) => !value)}
-          className={`inline-flex h-10 w-10 items-center justify-center rounded border transition-colors lg:hidden ${
-            isHomeHero
-              ? "border-white/20 bg-white/[0.08] text-white"
-              : "border-line bg-white text-navy"
-          }`}
+          aria-expanded={open}
+          aria-controls="inner-mobile-nav"
+          className="inline-flex h-11 w-11 items-center justify-center border border-white/40 text-white lg:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </Container>
 
       {open ? (
-        <div className="border-t border-line bg-white lg:hidden">
+        <div className="border-t border-white/25 bg-[#061526] lg:hidden" id="inner-mobile-nav">
           <Container className="grid gap-2 py-4">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="rounded px-2 py-3 text-base font-medium text-navy hover:bg-mist">
+              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="rounded px-2 py-3 text-base font-medium text-white hover:bg-white/10">
                 {item.label}
               </Link>
             ))}
-            <ButtonLink href="/contact" ariaLabel="预约出海诊断" className="mt-2 justify-center">预约出海诊断</ButtonLink>
+            <ButtonLink href="/contact" ariaLabel="沟通出海需求" className="mt-2 justify-center">沟通出海需求</ButtonLink>
           </Container>
         </div>
       ) : null}

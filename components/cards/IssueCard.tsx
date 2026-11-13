@@ -4,7 +4,7 @@ export function IssueCard({ issue, index }: { issue: { question: string; risk: s
   return (
     <article className="rounded-[10px] bg-white p-6">
       <div className="mb-5 flex items-center justify-between">
-        <span className="font-serif text-[13px] font-semibold text-gold">
+        <span className="font-serif text-[14px] font-semibold text-gold">
           {String(index + 1).padStart(2, "0")}
         </span>
         <AlertTriangle className="h-4 w-4 text-gold/60" />
