@@ -1,0 +1,85 @@
+.en-site {
+  --en-navy: #061526;
+  --en-paper: #f6f4ee;
+  --en-muted: #485c70;
+  --en-gold: #d7a870;
+  --en-border: #d8ddd9;
+  --en-gutter: clamp(20px, 5.7vw, 84px);
+  color: #12273a;
+  line-height: 1.65;
+}
+.en-shell { width: min(100% - 2 * var(--en-gutter), 1272px); margin-inline: auto; }
+.en-site :is(h1,h2,h3) { text-wrap: balance; }
+.en-site :focus-visible { outline: 2px solid #a57135; outline-offset: 4px; }
+.en-site [id] { scroll-margin-top: 18px; }
+.en-skip { position: absolute; z-index: 20; top: 10px; left: 10px; padding: 8px 12px; background: white; transform: translateY(-150%); }
+.en-skip:focus { transform: none; }
+.en-header { position: relative; z-index: 5; background: var(--en-navy); color: white; border-bottom: 1px solid #ffffff28; }
+.en-header-row { display: flex; align-items: center; gap: 22px; min-height: 76px; }
+.en-brand { display: inline-flex; flex-shrink: 0; align-items: center; gap: 10px; color: white; font-size: clamp(17px, 2.1vw, 23px); font-weight: 650; white-space: nowrap; letter-spacing: -.025em; }
+.en-brand img { width: 42px; height: auto; }
+.en-desktop-nav { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 36px); margin-left: auto; color: #e3ebf0; font-size: 15px; }
+.en-desktop-nav a[aria-current="page"] { color: white; text-decoration: underline; text-decoration-color: var(--en-gold); text-underline-offset: 8px; }
+.en-desktop-nav a:hover, .en-footer nav a:hover { color: var(--en-gold); }
+.en-header-actions { display: flex; align-items: center; gap: 10px; }
+.en-header-contact, .en-button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 18px; font-weight: 650; line-height: 1.25; }
+.en-header-contact { border: 1px solid #ffffff48; white-space: nowrap; font-size: 15px; }
+.en-header-contact:hover { background: #ffffff15; }
+.en-mobile-menu { display: none; }
+.en-button { width: fit-content; background: var(--en-gold); color: var(--en-navy); border: 1px solid var(--en-gold); }
+.en-button:hover { background: #efc58e; }
+.en-hero { padding-block: clamp(40px, 6vw, 84px); background: var(--en-paper); }
+.en-hero .en-shell { align-items: center; }
+.en-kicker { color: #785021; letter-spacing: .08em; text-transform: uppercase; font-size: 14px; font-weight: 650; margin-bottom: 12px; }
+.en-hero h1 { font-size: clamp(34px, 3.9vw, 56px); line-height: 1.12; font-weight: 650; letter-spacing: -.035em; }
+.en-hero p:not(.en-kicker) { max-width: 58ch; color: var(--en-muted); font-size: clamp(16px, 1.5vw, 20px); margin-top: 16px; }
+.en-hero .en-button { margin-top: 22px; }
+.en-hero img { border: 1px solid var(--en-border); padding: 8px; background: white; object-fit: cover; }
+.en-section { padding-block: clamp(42px, 6.1vw, 88px); }
+.en-section h2 { font-size: clamp(27px, 3vw, 40px); line-height: 1.18; letter-spacing: -.025em; font-weight: 650; }
+.en-section h2 + p { margin-top: 12px; }
+.en-section h3, .en-card h2 { font-size: clamp(20px, 2vw, 26px); line-height: 1.25; font-weight: 650; letter-spacing: -.015em; }
+.en-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: clamp(16px, 2.5vw, 32px); }
+.en-section h2 + .en-grid, .en-section h2 + p + .en-grid { margin-top: 24px; }
+.en-card { min-width: 0; border: 1px solid var(--en-border); padding: clamp(17px, 2vw, 26px); background: #fff; }
+.en-card p, .en-card ul, .en-card ol { margin-top: 10px; color: var(--en-muted); }
+.en-card img { width: 100%; object-fit: cover; aspect-ratio: 16 / 9; margin-bottom: 14px; }
+.en-card a:not(.en-button), .en-prose a:not(.en-button) { color: #785021; font-weight: 650; text-underline-offset: 3px; text-decoration: underline; }
+.en-card li + li { margin-top: 6px; }
+.en-card :is(ul,ol), .en-prose ul { padding-left: 22px; list-style: disc; }
+.en-prose { max-width: 74ch; }
+.en-prose p, .en-prose ul { margin-top: 10px; }
+.en-prose h2 { font-size: clamp(22px, 2.15vw, 29px); margin-top: 28px; }
+.en-footer { background: var(--en-navy); color: #dbe4ed; padding-block: 38px; border-top: 1px solid #ffffff24; }
+.en-footer-grid { display: grid; grid-template-columns: 1.3fr 1fr .75fr; gap: 25px; }
+.en-footer p { margin-top: 12px; font-size: 15px; max-width: 44ch; }
+.en-footer nav { display: flex; flex-wrap: wrap; align-content: start; gap: 8px 18px; font-size: 15px; }
+.en-site .lexon-home h1 { font-family: Georgia, serif; font-size: clamp(43px, 4.8vw, 69px); line-height: 1.1; letter-spacing: -.045em; }
+.en-site .lexon-home .hero-context { font-size: clamp(15px, 1.55vw, 20px); letter-spacing: .01em; }
+.en-site .lexon-home .hero-copy { max-width: 630px; }
+.en-site .lexon-home .case-minor .case-meta { position: static; margin-top: 12px; }
+.en-site .lexon-home .case-minor .case-body { padding-bottom: 50px; }
+.en-site .lexon-home .service-detail a { font-weight: 650; color: #785021; text-decoration: underline; text-underline-offset: 3px; }
+.en-site .lexon-home .market { grid-template-columns: 35% 1fr; }
+.en-site .lexon-home .case-feature .case-meta { padding-right: 43px; }
+@media (max-width: 940px) {
+  .en-header-row { justify-content: space-between; min-height: 65px; gap: 9px; }
+  .en-desktop-nav, .en-header-contact { display: none; }
+  .en-mobile-menu { display: block; }
+  .en-mobile-menu summary { display: grid; place-items: center; cursor: pointer; width: 44px; height: 44px; list-style: none; border: 1px solid #ffffff48; }
+  .en-mobile-menu summary::-webkit-details-marker { display: none; }
+  .en-mobile-menu nav { position: absolute; inset: 100% 0 auto; display: grid; width: 100%; padding: 8px var(--en-gutter) 16px; background: var(--en-navy); border-top: 1px solid #ffffff40; }
+  .en-mobile-menu nav a { padding-block: 9px; }
+}
+@media (max-width: 760px) {
+  .en-footer-grid { grid-template-columns: 1fr; gap: 18px; }
+  .en-brand img { width: 34px; }
+  .en-site .lexon-home .proof-item:last-child { display: grid; gap: 4px; }
+  .en-site .lexon-home h1 { font-size: clamp(34px, 9.5vw, 53px); }
+  .en-site .lexon-home .hero-copy > p:not(.hero-context) { font-size: 16px; }
+  .en-site .lexon-home .case-minor .case-link { grid-template-columns: 29% 1fr; }
+  .en-site .lexon-home .case-minor .case-body { padding-bottom: 43px; }
+  .en-site .lexon-home .case-minor h3 { font-size: 19px; }
+  .en-site .lexon-home .hero-context { align-items: start; }
+  .en-site .lexon-home .hero-context::before { margin-top: .65em; }
+}

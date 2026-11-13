@@ -68,3 +68,29 @@ img {
   .site-footer-with-mobile-action { padding-bottom: 73px; background: #071a2f; }
 }
 .inner-title-phrase { white-space: nowrap; }
+
+.site-language {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding-inline: 10px;
+  border: 1px solid #ffffff48;
+  color: #f0f4f7;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+.site-language:hover { background: #ffffff15; }
+.site-language:focus-visible { outline: 2px solid #efc494; outline-offset: 3px; }
+.lexon-home .home-mobile-actions { display: none; }
+.lexon-home .home-desktop-language { margin-left: -6px; }
+@media (max-width: 930px) {
+  .lexon-home .home-mobile-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+  .lexon-home .home-desktop-language, .lexon-home .header .button { display: none; }
+}
+@media (min-width: 761px) and (max-width: 930px) {
+  .lexon-home .home-mobile-actions .nav-toggle { display: none; }
+  .lexon-home .home-mobile-actions { margin-left: 0; order: 3; }
+}
